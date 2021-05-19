@@ -92,16 +92,16 @@
             <div class="col">
                 <div class="card mb-4 shadow-sm">
                     <div class="card-header">
-                        <h5 class="my-0 fw-normal">...</h5>
+                        <h5 class="my-0 fw-normal">ILIAS Opencast DL</h5>
                     </div>
                     <div class="card-body">
                         <ul class="list-unstyled mt-3 mb-4">
-                            <li>...</li>
-                            <li>...</li>
-                            <li>...</li>
-                            <li>...</li>
+                            <li>Modifies: ilias.studium.kit.edu</li>
+                            <li>Adds a direct Download</li>
+                            <li>Link to every Opencast</li>
+                            <li>Video Table</li>
                         </ul>
-                        <button type="button" class="w-100 btn btn-lg btn-primary" disabled>...</button>
+                        <button type="button" id="iodl:download" class="w-100 btn btn-lg btn-primary">Download <span id="iodl:version">latest</span></button>
                     </div>
                 </div>
             </div>
@@ -135,7 +135,9 @@
             if (this.readyState === 4 && this.status === 200) {
                 let updates = JSON.parse(this.responseText);
                 let w2g = updates.addons["Watch2Gether Enhancer"].updates;
+                let iodl = updates.addons["ILIAS Opencast DL"].updates;
                 updateVersions(w2g, 'w2g');
+                updateVersions(iodl, 'iodl');
             }
         }
         xhr.open("GET", "updates.json", true);
