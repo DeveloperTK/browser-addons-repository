@@ -53,7 +53,7 @@
             "updates": [
                 {
                     "version": "1.0.1",
-                    "update_link": "https://pages.foxat.de/browser-addons-repository/ilias-opencast-dl/ilias_opencast_dl-1.0.1.xpi",
+                    "update_link": "https://developertk.github.io/browser-addons-repository/ilias-opencast-dl/ilias_opencast_dl-1.0.1.xpi",
                     "applications": {
                         "gecko": {
                             "strict_min_version": "57"
